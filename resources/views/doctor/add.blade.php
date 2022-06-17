@@ -20,14 +20,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1 class="card-title"style="padding-bottom:10px">Add New Doctor</h1>
-                                <form class="main-form">
+                                <form class="main-form" action="{{url('upload-doctor')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div style="padding-bottom:10px">
                                         <label style="margin-right:10px; width:20%;">Doctor Name: </label>
                                         <input type="text" style="color:black; width:60%;" name="doctor_name" placeholder="Write name here"/>
                                     </div>
                                     <div style="padding-bottom:10px">
                                         <label style="margin-right:10px; width:20%;">Phone Number: </label>
-                                        <input type="number" style="color:black; width:60%;" name="doctor_phone" placeholder="Write phone number here"/>
+                                        <input type="text" style="color:black; width:60%;" name="doctor_phone" placeholder="Write phone number here"/>
                                     </div>
                                     <div style="padding-bottom:10px">
                                         <label style="margin-right:10px; width:20%;">Room Number: </label>
@@ -35,7 +36,7 @@
                                     </div>
                                     <div style="padding-bottom:10px">
                                         <label style="margin-right:10px; width:20%;">Department: </label>
-                                        <select name="departement" style="color:black; width:30%;" class="custom-select">
+                                        <select name="doctor_department" style="color:black; width:30%;" class="custom-select">
                                             <option value="">--Choose Department--</option>
                                             <option value="general">General Health</option>
                                             <option value="cardiology">Cardiology</option>
