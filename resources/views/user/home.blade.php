@@ -25,7 +25,7 @@
   <body>
     <div class="back-to-top"></div>
 
-    @include('user.header')
+    @include('user.navbar')
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
       <div class="hero-section">
