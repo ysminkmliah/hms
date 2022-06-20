@@ -30,7 +30,7 @@ class AdminController extends Controller
 
         $doctor->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Doctor Added Successfully!');
 
     }
 }
