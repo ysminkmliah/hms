@@ -18,7 +18,8 @@ class HomeController extends Controller
         }
         else
         {
-            return view('index'); 
+            $doctors = Doctor::all();
+            return view('index', compact('doctors'));
         }    
     }
     

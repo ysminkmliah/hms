@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    @include('user.doctor')
+    @include('doctor.view')
 
     @include('user.news')
 
