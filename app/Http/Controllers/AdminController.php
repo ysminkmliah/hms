@@ -13,7 +13,7 @@ class AdminController extends Controller
         return view('doctor.add');
     }
 
-    public function uploadDoctor(Request $request)
+    public function submitDoctor(Request $request)
     {
         $doctor = new Doctor;
 

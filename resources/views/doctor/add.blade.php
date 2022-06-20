@@ -27,7 +27,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1 class="card-title"style="padding-bottom:10px">Add New Doctor</h1>
-                                <form class="main-form" action="{{url('upload-doctor')}}" method="POST" enctype="multipart/form-data">
+                                <form class="main-form" action="{{url('add-doctor')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div style="padding-bottom:10px">
                                         <label style="margin-right:10px; width:20%;">Doctor Name: </label>
