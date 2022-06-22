@@ -67,7 +67,7 @@
     </li>
 
     <li class="nav-item menu-items">
-      <a class="nav-link" href="{{url('add-doctor')}}">
+      <a class="nav-link" href="{{url('doctor-add')}}">
         <span class="menu-icon"><i class="mdi mdi-file-document-box"></i> </span>
         <span class="menu-title">Add New Doctor</span>
       </a>

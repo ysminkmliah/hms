@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\DoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/add-doctor', [AdminController::class,'addDoctor']);
-Route::post('/add-doctor', [AdminController::class,'submitDoctor']);
+//doctor
+Route::get('/doctor-add', [DoctorController::class,'add']);
+Route::post('/doctor-add', [DoctorController::class,'submit']);
 
-Route::post('/add-appointment', [HomeController::class,'submitAppointment']);
+
+//appointment
+Route::post('/appointment-add', [AppointmentController::class,'submit']);
