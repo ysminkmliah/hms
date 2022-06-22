@@ -9,6 +9,22 @@ use App\Models\Appointment;
 
 class AppointmentController extends Controller
 {
+    public function view()
+    {
+        if(Auth::id())
+        {
+            $userId = Auth::user()->id;
+
+            $appointments = Appointment::with('doctor')->where('user_id', $userId)->get();
+            
+            return view('appointment.view', compact('appointments'));
+        }
+        else{
+            return redirect()->back();
+        }
+        
+    }
+
     public function submit(Request $request)
     {
         $appointment = new Appointment;
@@ -28,5 +44,14 @@ class AppointmentController extends Controller
 
         $appointment->save();
         return redirect()->back()->with('message', 'Appointment request is successful. We will contact you soon.');
+    }
+
+    public function delete($id)
+    {
+        $appointment = Appointment::find($id);
+
+        $appointment->delete();
+
+        return redirect()->back()->with('message', 'Appointment deleted succesfully.');
     }
 }
