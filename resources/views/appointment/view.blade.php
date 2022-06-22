@@ -41,7 +41,7 @@
         <br>
         <div class="text-center table table-bordered">
             <table width="100%">
-                <tr class="text-center" style="background-color:#89cff0;">
+                <tr style="background-color:#89cff0;">
                     <th>Doctor Name</th>
                     <th>Date</th>
                     <th>Message</th>
@@ -51,10 +51,10 @@
                 @foreach ($appointments as $appointment)
                     <tr>
                         <td>Dr. {{ $appointment->doctor->name }} ({{ $appointment->doctor->department }})</td>
-                        <td class="text-center">{{ $appointment->date }}</td>
+                        <td>{{ $appointment->date }}</td>
                         <td>{{ $appointment->message }}</td>
-                        <td class="text-center">{{ $appointment->status }}</td>
-                        <td class="text-center">
+                        <td>{{ $appointment->status }}</td>
+                        <td>
                             <a href="{{url('appointment-delete', $appointment->id)}}" class="btn btn-danger">Cancel Appointment</a>
                         </td>
                     </tr>

@@ -37,5 +37,8 @@ Route::post('/doctor-add', [DoctorController::class,'submit']);
 
 //appointment
 Route::get('/appointment', [AppointmentController::class,'view']);
+Route::get('/appointment-list', [AppointmentController::class,'viewList']);
 Route::post('/appointment-add', [AppointmentController::class,'submit']);
 Route::get('/appointment-delete/{id}', [AppointmentController::class,'delete']);
+Route::get('/appointment-approve/{id}', [AppointmentController::class,'approve']);
+Route::get('/appointment-reject/{id}', [AppointmentController::class,'reject']);
