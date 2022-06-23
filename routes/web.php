@@ -31,9 +31,11 @@ Route::middleware([
 });
 
 //doctor
+Route::get('/doctor-list', [DoctorController::class,'viewList']);
 Route::get('/doctor-add', [DoctorController::class,'add']);
 Route::post('/doctor-add', [DoctorController::class,'submit']);
-
+Route::get ('/doctorupdate/{id}', [DoctorController::class,'update']);
+Route::get('/doctor-delete/{id}', [DoctorController::class,'delete']);
 
 //appointment
 Route::get('/appointment', [AppointmentController::class,'view']);
